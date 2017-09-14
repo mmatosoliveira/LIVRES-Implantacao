@@ -1,0 +1,134 @@
+#pesquisarLivro{
+	-fx-background-image: url('images/search-icon-resized.png');
+}
+
+#pesquisarUsuario{
+	-fx-background-image: url('images/search-icon-resized.png');
+}
+
+#labelSelecionado{
+	-fx-font-weight: bold;
+}
+
+#botaoLogar{
+    -fx-background-position: left;
+    -fx-background-size: 21px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-login-button.png');
+}
+
+#botaoCadastrarLivro{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/right-icon.png');
+}
+
+#botaoCadastrarUsuario{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/right-icon.png');
+}
+
+#botaoEmprestarLivro{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/right-icon.png');
+}
+
+#botaoRenovarEmprestimo{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/right-icon.png');
+}
+
+#botaoAdicionar{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-add.png');
+	-fx-background-color: none;
+}
+
+#botaoFechar{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-close.png');
+	-fx-background-color: none;
+}
+
+#botaoRemover{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-delete.png');
+	-fx-background-color: none;
+}
+
+#botaoEditar{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-edit.png');
+	-fx-background-color: none;
+}
+
+#renovar{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-renew.png');
+	-fx-background-color: none;
+}
+
+#imprimirRecibo{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-printer.png');
+	-fx-background-color: none;
+}
+
+#botaoAplicarFiltro{
+	-fx-background-position: left;
+    -fx-background-size: 24px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-filter.png');
+	-fx-background-color: none;
+}
+
+#devolverLivro{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-devolver.png');
+	-fx-background-color: none;
+}
+
+#botaoAtualizarImpressorasInstaladas{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-refresh.png');
+	-fx-background-color: none;
+}
+
+#botaoRemoverLivroAcervo{
+	-fx-background-position: left;
+    -fx-background-size: 20px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-remove.png');
+	-fx-background-color: none;
+}
+
+#botaoDoar{
+	-fx-background-position: left;
+    -fx-background-size: 26px;
+    -fx-background-repeat: no-repeat;
+	-fx-background-image: url('images/icon-donate.png');
+	-fx-background-color: none;
+}

@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<project name="BibliotecaFabiano-Implantacao" default="do-deploy" basedir="."  xmlns:fx="javafx:com.sun.javafx.tools.ant">
+	<target name="init-fx-tasks">
+		<path id="fxant">
+			<filelist>
+				<file name="${java.home}\..\lib\ant-javafx.jar"/>
+				<file name="${java.home}\lib\jfxrt.jar"/>
+				<file name="${basedir}"/>
+			</filelist>
+		</path>
+	
+		<taskdef resource="com/sun/javafx/tools/ant/antlib.xml"
+			uri="javafx:com.sun.javafx.tools.ant"
+			classpathref="fxant"/>
+	</target>
+	<target name="setup-staging-area">
+		<delete dir="externalLibs" />
+		<delete dir="project" />
+		<delete dir="projectRefs" />
+	
+		<mkdir dir="externalLibs" />
+	
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/external jars">
+				<filename name="NumberField.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="javax.persistence_2.1.1.v201509150925.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-lang3-3.6.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-collections-3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-logging-1.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="eclipselink.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="modelmapper-0.7.5.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="javax.persistence.source_2.1.1.v201509150925.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="controlsfx-samples-8.40.12.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="joda-time-1.4.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="poi-3.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="groovy-all-minimal-1.5.3.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="iText-2.1.7.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="servlet-api-2.4.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-chart-customizers-6.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="spring-beans-2.5.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="fxsampler-1.0.9.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="mysql-connector-java-5.1.40-bin.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-6.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-digester-1.7.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-fonts-6.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-beanutils-1.7.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="controlsfx-8.40.12.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="commons-lang3-3.6-javadoc.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-chart-themes-6.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="spring-core-3.2.3.release.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="mysql-connector-java-5.1.42-bin.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-javaflow-6.3.1.jar"/>
+			</fileset>
+		</copy>
+		<copy todir="externalLibs">
+			<fileset dir="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars">
+				<filename name="jasperreports-functions-6.3.1.jar"/>
+			</fileset>
+		</copy>
+	
+		<mkdir dir="project" />
+		<copy todir="project">
+			<fileset dir="/home/mmatos/workspace/BibliotecaFabiano-Implantacao">
+				<include name="src/**" />
+			</fileset>
+		</copy>
+	
+		<mkdir dir="projectRefs" />
+	</target>
+	<target name='do-compile'>
+		<delete dir="build" />
+		<mkdir dir="build/src" />
+		<mkdir dir="build/libs" />
+		<mkdir dir="build/classes" />
+	
+		<!-- Copy project-libs references -->
+		<copy todir="build/libs">
+			<fileset dir="externalLibs">
+				<include name="jasperreports-fonts-6.3.1.jar"/>
+				<include name="NumberField.jar"/>
+				<include name="spring-core-3.2.3.release.jar"/>
+				<include name="jasperreports-chart-themes-6.3.1.jar"/>
+				<include name="fxsampler-1.0.9.jar"/>
+				<include name="joda-time-1.4.jar"/>
+				<include name="poi-3.9.jar"/>
+				<include name="commons-collections-3.1.jar"/>
+				<include name="modelmapper-0.7.5.jar"/>
+				<include name="eclipselink.jar"/>
+				<include name="iText-2.1.7.jar"/>
+				<include name="commons-lang3-3.6.jar"/>
+				<include name="jasperreports-chart-customizers-6.3.1.jar"/>
+				<include name="commons-beanutils-1.7.jar"/>
+				<include name="controlsfx-samples-8.40.12.jar"/>
+				<include name="servlet-api-2.4.jar"/>
+				<include name="spring-beans-2.5.1.jar"/>
+				<include name="jasperreports-javaflow-6.3.1.jar"/>
+				<include name="groovy-all-minimal-1.5.3.jar"/>
+				<include name="javax.persistence_2.1.1.v201509150925.jar"/>
+				<include name="controlsfx-8.40.12.jar"/>
+				<include name="commons-digester-1.7.jar"/>
+				<include name="commons-lang3-3.6-javadoc.jar"/>
+				<include name="mysql-connector-java-5.1.42-bin.jar"/>
+				<include name="mysql-connector-java-5.1.40-bin.jar"/>
+				<include name="jasperreports-functions-6.3.1.jar"/>
+				<include name="jasperreports-6.3.1.jar"/>
+				<include name="commons-logging-1.1.jar"/>
+				<include name="javax.persistence.source_2.1.1.v201509150925.jar"/>
+			</fileset>
+		</copy>
+	
+		<!-- Copy project references -->
+	
+		<!-- Copy project sources itself -->
+		<copy todir="build/src">
+			<fileset dir="project/src">
+				<include name="**/*"/>
+			</fileset>
+		</copy>
+	
+		<javac includeantruntime="false" source="1.8" target="1.8" srcdir="build/src" destdir="build/classes" encoding="UTF-8">
+			<classpath>
+				<fileset dir="build/libs">
+					<include name="*"/>
+				</fileset>
+			</classpath>
+		</javac>
+	
+		<!-- Copy over none Java-Files -->
+		<copy todir="build/classes">
+		<fileset dir="project/src">
+			<exclude name="**/*.java"/>
+		</fileset>
+		</copy>
+	
+	
+	</target>
+	<target name="do-deploy" depends="setup-staging-area, do-compile, init-fx-tasks">
+		<delete file="dist"/>
+		<delete file="deploy" />
+	
+		<mkdir dir="dist" />
+		<mkdir dir="dist/libs" />
+	
+		<copy todir="dist/libs">
+			<fileset dir="externalLibs">
+				<include name="*" />
+			</fileset>
+		</copy>
+	
+	
+		<fx:resources id="appRes">
+			<fx:fileset dir="dist" includes="BibliotecaFabiano-Implantacao.jar"/>
+			<fx:fileset dir="dist" includes="libs/*"/>
+			<fx:fileset dir="dist" includes="resources/**"/>
+		</fx:resources>
+	
+		<fx:application id="fxApplication"
+			name="LIVRES"
+			mainClass="br.com.casafabianodecristo.biblioteca.Principal"
+			version="2.7"
+		/>
+	
+		<mkdir dir="build/classes/META-INF" />
+	
+	
+	
+		<fx:jar destfile="dist/BibliotecaFabiano-Implantacao.jar">
+			<fx:application refid="fxApplication"/>
+			<fileset dir="build/classes">
+			</fileset>
+			<fx:resources refid="appRes"/>
+	
+			<manifest>
+				<attribute name="Implementation-Vendor" value="Matheus de Matos Oliveira"/>
+				<attribute name="Implementation-Title" value="LIVRES"/>
+				<attribute name="Implementation-Version" value="2.7"/>
+				<attribute name="JavaFX-Feature-Proxy" value="None"/>
+			</manifest>
+		</fx:jar>
+	
+	
+		<mkdir dir="deploy" />
+		<!-- Need to use ${basedir} because somehow the ant task is calculating the directory differently -->
+		<fx:deploy
+			embedJNLP="false"
+			extension="false"
+			includeDT="false"
+			offlineAllowed="true"
+			outdir="${basedir}/deploy"
+			outfile="LIVRES" nativeBundles="deb"
+			updatemode="background" >
+	
+			<fx:platform basedir="${java.home}"/>
+			<fx:info title="LIVRES" vendor="Matheus de Matos Oliveira"/>
+	
+			<fx:application refId="fxApplication"/>
+			<fx:resources refid="appRes"/>
+		</fx:deploy>
+	
+	
+	</target>
+</project>

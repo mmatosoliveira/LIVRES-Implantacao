@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="LIVRES.jnlp">
+  <information>
+    <title>LIVRES</title>
+    <vendor>Matheus de Matos Oliveira</vendor>
+    <description>LIVRES</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="BibliotecaFabiano-Implantacao.jar" size="421407" download="eager" />
+    <jar href="libs/NumberField.jar" size="3917" download="eager" />
+    <jar href="libs/commons-beanutils-1.7.jar" size="188671" download="eager" />
+    <jar href="libs/commons-collections-3.1.jar" size="559366" download="eager" />
+    <jar href="libs/commons-digester-1.7.jar" size="139966" download="eager" />
+    <jar href="libs/commons-lang3-3.6-javadoc.jar" size="1319475" download="eager" />
+    <jar href="libs/commons-lang3-3.6.jar" size="494856" download="eager" />
+    <jar href="libs/commons-logging-1.1.jar" size="52915" download="eager" />
+    <jar href="libs/controlsfx-8.40.12.jar" size="996389" download="eager" />
+    <jar href="libs/controlsfx-samples-8.40.12.jar" size="665038" download="eager" />
+    <jar href="libs/eclipselink.jar" size="9078109" download="eager" />
+    <jar href="libs/fxsampler-1.0.9.jar" size="30952" download="eager" />
+    <jar href="libs/groovy-all-minimal-1.5.3.jar" size="2787353" download="eager" />
+    <jar href="libs/iText-2.1.7.jar" size="1130070" download="eager" />
+    <jar href="libs/jasperreports-6.3.1.jar" size="5527829" download="eager" />
+    <jar href="libs/jasperreports-chart-customizers-6.3.1.jar" size="43833" download="eager" />
+    <jar href="libs/jasperreports-chart-themes-6.3.1.jar" size="168841" download="eager" />
+    <jar href="libs/jasperreports-fonts-6.3.1.jar" size="2478097" download="eager" />
+    <jar href="libs/jasperreports-functions-6.3.1.jar" size="32118" download="eager" />
+    <jar href="libs/jasperreports-javaflow-6.3.1.jar" size="5588071" download="eager" />
+    <jar href="libs/javax.persistence.source_2.1.1.v201509150925.jar" size="260041" download="eager" />
+    <jar href="libs/javax.persistence_2.1.1.v201509150925.jar" size="162116" download="eager" />
+    <jar href="libs/joda-time-1.4.jar" size="521484" download="eager" />
+    <jar href="libs/modelmapper-0.7.5.jar" size="508824" download="eager" />
+    <jar href="libs/mysql-connector-java-5.1.40-bin.jar" size="990927" download="eager" />
+    <jar href="libs/mysql-connector-java-5.1.42-bin.jar" size="996444" download="eager" />
+    <jar href="libs/poi-3.9.jar" size="1869113" download="eager" />
+    <jar href="libs/servlet-api-2.4.jar" size="98517" download="eager" />
+    <jar href="libs/spring-beans-2.5.1.jar" size="467331" download="eager" />
+    <jar href="libs/spring-core-3.2.3.release.jar" size="867800" download="eager" />
+  </resources>
+  <jfx:javafx-desc  width="0" height="0" main-class="br.com.casafabianodecristo.biblioteca.Principal"  name="LIVRES" />
+  <update check="background"/>
+</jnlp>
