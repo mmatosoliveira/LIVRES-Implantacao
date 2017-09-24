@@ -72,18 +72,30 @@ public class RemoverDoarLivrosController {
             	}
             }            
         });
+		
+		botaoDoar.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+            	Optional<ButtonType> result = alerta.alertaConfirmacao("Doar um livro significa marca-lo como doado, ou seja, que ele foi disponibilizado para algum membro \nda comunidade ou destinado"
+            			+ " para outras bibliotecas. Dessa forma o exemplar fica indisponível no acervo físico."
+            			+ "\nIsso implica em tornar o livro indisponível para empréstimos, consultas e outras operações. Deseja continuar?");
+            	
+            	if(result.get() == ButtonType.OK){
+            		
+            	}
+            }            
+        });
 	}
 	
 	@FXML private void consultarLivro(Event event){
 		String tomboPatrimonial = this.tomboPatrimonial.getText();
 		
 		if(tomboPatrimonial.isEmpty()){
-			alerta.notificacaoAlerta("Remoção/Doação de livros", "É obrigatório digitar o tombo patrimonial do exemplar que será doado ou removido do acervo.");
+			alerta.notificacaoAlerta("Remoção/Doação de livros", "É obrigatório digitar o tombo patrimonial do exemplar que será consultado.");
 			event.consume();
 		}
 		else {
-			ObservableList<Livro> itens = FXCollections.observableList(service.pesquisaRapidaLivro(tomboPatrimonial, false, false, true, true));
-			
+			ObservableList<Livro> itens = FXCollections.observableList(service.pesquisaRapidaLivro(tomboPatrimonial, true));
 			tabelaLivros.setItems(itens);
 			
 			colunaTitulo.setCellValueFactory(x -> new ReadOnlyStringWrapper(x

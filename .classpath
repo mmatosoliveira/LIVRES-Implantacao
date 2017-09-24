@@ -5,7 +5,6 @@
 	<classpathentry kind="con" path="org.eclipse.fx.ide.jdt.core.JAVAFX_CONTAINER"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/external jars/NumberField.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-chart-themes-6.3.1.jar"/>
-	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-6.3.1.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/iText-2.1.7.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/controlsfx-samples-8.40.12.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-chart-customizers-6.3.1.jar"/>
@@ -13,8 +12,6 @@
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/modelmapper-0.7.5.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/servlet-api-2.4.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/poi-3.9.jar"/>
-	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-javaflow-6.3.1.jar"/>
-	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-functions-6.3.1.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-fonts-6.3.1.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/commons-logging-1.1.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/commons-digester-1.7.jar"/>
@@ -32,5 +29,7 @@
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/spring-core-3.2.3.release.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/spring-beans-2.5.1.jar"/>
 	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/joda-time-1.4.jar"/>
+	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-javaflow-6.3.1.jar"/>
+	<classpathentry kind="lib" path="/home/mmatos/git/BibliotecaFabiano2/resources/JarsEclipse/Jars/jasperreports-6.3.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

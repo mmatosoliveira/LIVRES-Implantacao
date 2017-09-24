@@ -1,10 +1,6 @@
 package br.com.casafabianodecristo.biblioteca.view;
 
-import java.util.List;
-
 import org.controlsfx.control.MaskerPane;
-
-import br.com.casafabianodecristo.biblioteca.appservice.BibliotecaAppService;
 import br.com.casafabianodecristo.biblioteca.dto.UsuarioDto;
 import br.com.casafabianodecristo.biblioteca.exceptions.ApplicationException;
 import br.com.casafabianodecristo.biblioteca.interfacevalidator.CadastroUsuarioInterfaceValidator;
@@ -54,6 +50,13 @@ public class EditarDadosUsuarioAdm {
 		}
 	}
 	
+	@FXML private void cancelar(){
+		if(ButtonType.OK == alerta.alertaConfirmacaoSair().get()){
+			Stage stage = (Stage) botaoCancelar.getScene().getWindow();
+	        stage.close();
+		}
+	}
+	
 	@SuppressWarnings("rawtypes")
 	public Task taskAlterarUsuario() {
         return new Task() {
@@ -82,7 +85,7 @@ public class EditarDadosUsuarioAdm {
 	
 	protected void alterarDadosUsuario(){
 		usuarioDto.setNomeUsuarioAcessoSistema(nomeUsuario.getText());
-		usuarioDto.setSenha(senhaNova.getText());
+		usuarioDto.setSenhaCriptografada(senhaNova.getText());
 		usuarioDto.setDicaSenha(dicaSenha.getText());
 		usuarioDto.setExibeMsg(false);
 		try {

@@ -168,7 +168,7 @@
 	
 		<mkdir dir="project" />
 		<copy todir="project">
-			<fileset dir="/home/mmatos/workspace/BibliotecaFabiano-Implantacao">
+			<fileset dir="/home/mmatos/git/LIVRES-Implantacao/BibliotecaFabiano-Implantacao">
 				<include name="src/**" />
 			</fileset>
 		</copy>
@@ -281,7 +281,7 @@
 			<manifest>
 				<attribute name="Implementation-Vendor" value="Matheus de Matos Oliveira"/>
 				<attribute name="Implementation-Title" value="LIVRES"/>
-				<attribute name="Implementation-Version" value="2.7"/>
+				<attribute name="Implementation-Version" value="2.8"/>
 				<attribute name="JavaFX-Feature-Proxy" value="None"/>
 			</manifest>
 		</fx:jar>

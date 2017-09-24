@@ -2,6 +2,10 @@
 	-fx-background-image: url('images/search-icon-resized.png');
 }
 
+#iconePesquisar{
+	-fx-background-image: url('images/search-icon-resized.png');
+}
+
 #pesquisarUsuario{
 	-fx-background-image: url('images/search-icon-resized.png');
 }

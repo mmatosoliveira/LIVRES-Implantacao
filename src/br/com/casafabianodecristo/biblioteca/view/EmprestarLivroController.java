@@ -343,7 +343,7 @@ public class EmprestarLivroController {
 	private void atualizarLivros(){
 		selectorLivros.getSourceItems().removeAll(livrosDto);
 		livrosDto.clear();
-		List<Livro> l = servico.pesquisaRapidaLivro(nomeLivro.getText(), false, false, false, true);
+		List<Livro> l = servico.pesquisaRapidaLivro(nomeLivro.getText(), true);
 		
 		if(l.size() != 0){
 			ModelMapper mapper = new ModelMapper();

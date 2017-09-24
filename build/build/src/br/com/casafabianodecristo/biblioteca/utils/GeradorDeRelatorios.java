@@ -43,6 +43,8 @@ public class GeradorDeRelatorios
 	
 	private Connection conexao = ConnectionFactory.getConnection(); 
 	
+	private final String OsName = System.getProperty("os.name");
+	
 	/**
 	 * Nome do arquivo .jrxml que deve ser compilado
 	 */
@@ -144,7 +146,13 @@ public class GeradorDeRelatorios
             
             // preenche relatorio
             JasperPrint print = JasperFillManager.fillReport(jasper, parametros, this.conexao);
-            String nomeComposto = System.getProperty("user.home")+"\\Documents\\Livres\\Relatórios"+nome;
+            String nomeComposto;
+            
+            if(OsName.equals("Linux"))
+            	nomeComposto = System.getProperty("user.home")+"/Livres/Relatórios/"+nome;
+            else 
+            	nomeComposto = System.getProperty("user.home")+"\\Documents\\Livres\\Relatórios"+nome;
+            
             JasperExportManager.exportReportToPdfFile(print, nomeComposto);
             
             return new Object();

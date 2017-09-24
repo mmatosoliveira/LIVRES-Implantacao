@@ -9,14 +9,14 @@
 <?import javafx.scene.text.Font?>
 <?import org.controlsfx.control.MaskerPane?>
 
-<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.casafabianodecristo.biblioteca.view.ConfigurarImpressoraPadraoController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.com.casafabianodecristo.biblioteca.view.ConfigurarImpressoraPadraoController">
    <children>
       <Label alignment="CENTER" layoutX="286.0" layoutY="6.0" text="Selecionar impressora padrão para recibos" textAlignment="CENTER" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
          <font>
             <Font name="Calibri Light" size="20.0" />
          </font>
       </Label>
-      <TableView fx:id="gridImpressoras" layoutX="200.0" layoutY="51.0" prefHeight="306.0" prefWidth="600.0" AnchorPane.bottomAnchor="54.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
+      <TableView fx:id="gridImpressoras" layoutX="200.0" layoutY="51.0" prefHeight="325.0" prefWidth="600.0" AnchorPane.bottomAnchor="86.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="40.0">
         <columns>
           <TableColumn fx:id="colunaImpressorasDisponiveis" prefWidth="75.0" text="Impressoras disponíveis" />
         </columns>
@@ -24,14 +24,14 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <Button fx:id="selecionarPadrao" layoutX="300.0" layoutY="359.0" mnemonicParsing="false" prefWidth="71.0" text="Selecionar" AnchorPane.bottomAnchor="5.0" />
-      <Button fx:id="cancelar" layoutX="229.0" layoutY="359.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="71.0" text="Cancelar" AnchorPane.bottomAnchor="5.0" />
-      <Button fx:id="botaoImpressoraNaoListada" layoutX="5.0" layoutY="356.0" mnemonicParsing="false" text="Minha impressora não está na lista" textFill="#1809eb" underline="true" wrapText="true" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="356.0" />
+      <Button fx:id="selecionarPadrao" layoutX="300.0" layoutY="359.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Selecionar" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="cancelar" layoutX="199.0" layoutY="359.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Cancelar" AnchorPane.bottomAnchor="5.0" />
+      <Button fx:id="botaoImpressoraNaoListada" layoutX="2.0" layoutY="380.0" mnemonicParsing="false" text="Minha impressora não está na lista" textFill="#1809eb" underline="true" wrapText="true" AnchorPane.leftAnchor="2.0" AnchorPane.topAnchor="380.0" />
       <BorderPane fx:id="paneCarregando" layoutX="200.0" layoutY="100.0" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <center>
             <MaskerPane fx:id="avisoCarregando" visible="false" BorderPane.alignment="CENTER" />
          </center>
     </BorderPane>
-      <Button fx:id="botaoAtualizarImpressorasInstaladas" alignment="CENTER_RIGHT" layoutX="506.0" layoutY="360.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Atualizar" underline="true" AnchorPane.rightAnchor="5.0" />
+      <Button fx:id="botaoAtualizarImpressorasInstaladas" alignment="CENTER_RIGHT" layoutX="507.0" layoutY="380.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="101.0" text="Atualizar" underline="true" AnchorPane.rightAnchor="4.0" />
    </children>
 </AnchorPane>

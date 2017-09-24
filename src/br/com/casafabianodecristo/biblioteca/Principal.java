@@ -53,9 +53,19 @@ public class Principal extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		//Criação dos diretórios padrão que serão usados pelo Livres.
-		String user = System.getProperty("user.home");
-		new File(user+"\\Documents\\Livres\\Relatórios").mkdirs();
-		new File(user+"\\Documents\\Livres\\Backups").mkdirs();
+		//Otimizado para utilização tanto no Linux quanto no Windows.
+		
+		String userPath = System.getProperty("user.home");
+		String osName = System.getProperty("os.name");
+		
+		if(osName.equals("Linux")){
+			new File(userPath+"/Livres/Relatórios").mkdirs();
+			new File(userPath+"/Livres/Backups").mkdirs();
+		}
+		else{
+			new File(userPath+"\\Documents\\Livres\\Relatórios").mkdirs();
+			new File(userPath+"\\Documents\\Livres\\Backups").mkdirs();
+		}
 		
 		//Criação ddo tratamento padrão para exceções não tratadas.
 		Thread.setDefaultUncaughtExceptionHandler((t, e) -> Platform.runLater(() -> showError(t, e)));

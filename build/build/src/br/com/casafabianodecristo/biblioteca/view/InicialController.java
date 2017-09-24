@@ -5,7 +5,6 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.*;
-
 import br.com.casafabianodecristo.biblioteca.Principal;
 import br.com.casafabianodecristo.biblioteca.appservice.*;
 import br.com.casafabianodecristo.biblioteca.dto.InicialDto;
@@ -21,10 +20,7 @@ import javafx.scene.control.*;
 
 public class InicialController {
 	@FXML
-	private ImageView iconePesquisar;
-	
-	@FXML
-	private ImageView iconeAtualizarDevolucoes;
+	private Button iconePesquisar;
 	
 	@FXML
 	private Label dataHora;
@@ -139,19 +135,11 @@ public class InicialController {
 		botaoCadastrarUsuario.getStylesheets().add(EmprestarLivroController.class.getResource("style.css").toExternalForm());
 		botaoEmprestarLivro.getStylesheets().add(EmprestarLivroController.class.getResource("style.css").toExternalForm());
 		botaoRenovarEmprestimo.getStylesheets().add(EmprestarLivroController.class.getResource("style.css").toExternalForm());
+		iconePesquisar.getStylesheets().add(EmprestarLivroController.class.getResource("style.css").toExternalForm());
 		tpPesquisa.setText("Digite alguma informação e pesquise um livro!");
 		dadoLivroPesquisa.setTooltip(tpPesquisa);
 		
 		atualizarGrid();	
-		
-		iconeAtualizarDevolucoes.setOnMousePressed(new EventHandler<MouseEvent>() {
-            @Override
-            public void handle(MouseEvent event) {
-            		ObservableList<Emprestimo> itens =FXCollections.observableList(servico.getDevolucoesPrevistas());
-            		tabelaEmprestimosPendentes.setItems(itens);
-            		atualizarGrid();
-            }            
-        });
 		
 		dadoLivroPesquisa.setOnKeyPressed((new EventHandler<KeyEvent>() {
 			@Override
@@ -274,24 +262,18 @@ public class InicialController {
 	
 	public void consultarLivro(){
 		String textoPesquisa = dadoLivroPesquisa.getText();
-    	boolean titulo = checkTitulo.isSelected();
-    	boolean autor = checkAutor.isSelected();
-    	boolean tombo = checkTombo.isSelected();
     	String textoAlerta = "Uma pesquisa vazia retorna todos os livros do sistema e isso pode demorar. Deseja continuar?";
     	
     	if (textoPesquisa.equals("")){
     		if(alerta.alertaConfirmacao(textoAlerta).get() == ButtonType.OK){	
-    			livros = servico.pesquisaRapidaLivro(textoPesquisa, titulo, autor, tombo, false);
+    			livros = servico.pesquisaRapidaLivro(textoPesquisa, false);
     			principal.carregarResultadoBusca(livros);
         	}     
     	}
     	else{
-			livros = servico.pesquisaRapidaLivro(textoPesquisa, titulo, autor, tombo, false);
+			livros = servico.pesquisaRapidaLivro(textoPesquisa, false);
 			principal.carregarResultadoBusca(livros);
     	}
-    	checkTitulo.setSelected(false);
-    	checkAutor.setSelected(false);
-    	checkTombo.setSelected(false);
 	}
 	
 	public void setPrincipal (Principal principal){

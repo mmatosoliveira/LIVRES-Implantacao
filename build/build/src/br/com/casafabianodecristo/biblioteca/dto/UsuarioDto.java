@@ -111,7 +111,7 @@ public class UsuarioDto {
 		return nomeCompleto;
 	}
 		
-	private String setSenhaCriptografada(String senha){
+	public String setSenhaCriptografada(String senha){
 		try {
 			return this.senha = ConvertToMD5.convertPasswordToMD5(senha);
 		} catch (NoSuchAlgorithmException e) {

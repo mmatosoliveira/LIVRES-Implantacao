@@ -23,9 +23,9 @@
     </Label>
     <HBox id="HBox" alignment="CENTER" layoutY="97.0" prefWidth="723.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
       <children>
-        <Button fx:id="botaoRemoverLivroAcervo" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="26.0" prefWidth="83.0" text="Remover" underline="true" />
+        <Button fx:id="botaoRemoverLivroAcervo" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="26.0" prefWidth="94.0" text="Remover" underline="true" />
         <Button fx:id="botaoDoar" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="25.0" prefWidth="62.0" text="Doar" underline="true" />
-        <Button fx:id="botaoFechar" alignment="CENTER_RIGHT" mnemonicParsing="false" prefWidth="75.0" text="Fechar" underline="true" />
+        <Button fx:id="botaoFechar" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Fechar" underline="true" />
       </children>
     </HBox>
       <TableView fx:id="tabelaLivros" layoutX="269.0" layoutY="129.0" prefHeight="271.0" prefWidth="723.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="129.0">
@@ -40,17 +40,17 @@
       </TableView>
       <GridPane layoutX="10.0" layoutY="51.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="51.0">
         <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="114.0" />
-            <ColumnConstraints hgrow="SOMETIMES" maxWidth="547.0" minWidth="10.0" prefWidth="523.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="138.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="232.0" minWidth="10.0" prefWidth="137.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="547.0" minWidth="10.0" prefWidth="503.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="159.0" minWidth="10.0" prefWidth="141.0" />
         </columnConstraints>
         <rowConstraints>
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
             <Label text="Tombo patrimonial:" />
-            <Numberfield fx:id="tomboPatrimonial" GridPane.columnIndex="1" />
-            <Button fx:id="botaoConsultar" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#consultarLivro" prefHeight="25.0" prefWidth="110.0" text="Consultar" textAlignment="RIGHT" underline="true" GridPane.columnIndex="2">
+            <Numberfield fx:id="tomboPatrimonial" prefHeight="26.0" prefWidth="502.0" GridPane.columnIndex="1" />
+            <Button fx:id="botaoConsultar" alignment="CENTER_RIGHT" mnemonicParsing="false" onAction="#consultarLivro" prefHeight="26.0" prefWidth="114.0" text="Consultar" textAlignment="RIGHT" underline="true" GridPane.columnIndex="2">
                <GridPane.margin>
                   <Insets left="25.0" right="-30.0" />
                </GridPane.margin>

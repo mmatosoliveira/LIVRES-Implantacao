@@ -67,33 +67,18 @@ public class LivroService {
 		return livro;
 	}
 	
-	public List<Livro> pesquisaRapidaLivro(String texto, boolean titulo, boolean autor, boolean tombo, boolean soDisponiveis){
+	public List<Livro> pesquisaRapidaLivro(String texto, boolean soDisponiveis){
 		List<Livro> livros = new ArrayList<>();
 		TypedQuery<Livro> query;
 		
 		createEntityManagerFactory();
 		createEntityManager();
-		if (titulo){
-			query = em.createQuery("select o from Livro o where o.titulo like :texto", Livro.class);
-			query.setParameter("texto", "%" + texto + "%");
-		}
-		else if (autor){
-			query = em.createQuery("select o from Livro o where o.nomeAutor like :texto", Livro.class);
-			query.setParameter("texto", "%" + texto + "%");
-		}
-		else if (tombo){
-			query = em.createQuery("select o from Livro o where o.tomboPatrimonial = :tombo", Livro.class);
-			int tomboP = 0;
-			try {tomboP = Integer.parseInt(texto);}
-			catch(NumberFormatException e){return new ArrayList<Livro>();}
-			query.setParameter("tombo", tomboP);
-		}
-		else if(soDisponiveis){
-			query = em.createQuery("select o from Livro o where o.flEmprestado = 0 and o.titulo like :texto", Livro.class);
+		if(soDisponiveis){
+			query = em.createQuery("select o from Livro o where o.flEmprestado = 0 and o.titulo like :texto or o.tomboPatrimonial like :texto or o.nomeAutor like :texto", Livro.class);
 			query.setParameter("texto", "%" + texto + "%");
 		}
 		else {
-			query = em.createQuery("select o from Livro o where o.titulo like :texto", Livro.class);
+			query = em.createQuery("select o from Livro o where o.titulo like :texto or o.tomboPatrimonial like :texto or o.nomeAutor like :texto", Livro.class);
 			query.setParameter("texto", "%" + texto + "%");
 		}
 		

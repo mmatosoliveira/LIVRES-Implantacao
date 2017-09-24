@@ -1,15 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-07-25T20:48:16 -->
+<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="TodosOsLivros" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="e791b703-cf13-45cb-b691-e1f6edaf3527">
-	<property name="com.jaspersoft.studio.data.sql.tables" value="YFZ3TGl2cm9zQ2FkYXN0cmFkb3NgICwxNSwxNSw4MTIxZDBiNy1iOTI5LTQyZGUtYWM3OC1mNTcx&#xA;OGZmNzMxZmI7"/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Conexao"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="BibliotecaFabiano"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w1" value="647"/>
 	<property name="com.jaspersoft.studio.property.dataset.dialog.DatasetDialog.sash.w2" value="353"/>
 	<queryString>
 		<![CDATA[SELECT *
 FROM `VwLivrosCadastrados`
-ORDER BY `VwLivrosCadastrados`.`TomboPatrimonial` ASC]]>
+ORDER BY `VwLivrosCadastrados`.`tomboPatrimonial` ASC]]>
 	</queryString>
 	<field name="TomboPatrimonial" class="java.lang.Integer"/>
 	<field name="Titulo" class="java.lang.String"/>
@@ -123,7 +122,7 @@ ORDER BY `VwLivrosCadastrados`.`TomboPatrimonial` ASC]]>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Serif" size="9" isBold="true" isItalic="true"/>
 				</textElement>
-				<text><![CDATA[Casa Fabiano de Cristo]]></text>
+				<text><![CDATA[LIVRES]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="368" y="14" width="90" height="16" uuid="a30a413f-6159-46bc-9a8a-82f1f0437f9f"/>
@@ -137,7 +136,7 @@ ORDER BY `VwLivrosCadastrados`.`TomboPatrimonial` ASC]]>
 			</textField>
 			<textField pattern="MMMMM dd, yyyy">
 				<reportElement x="20" y="15" width="100" height="15" uuid="4d221bcc-ee21-4445-8973-2dc43294eea6"/>
-				<textFieldExpression><![CDATA[DATEFORMAT(new Date(),"dd/MM/yyyy HH:mm:ss")]]></textFieldExpression>
+				<textFieldExpression><![CDATA[(new SimpleDateFormat("dd/MM/YYYY").format(new Date()))]]></textFieldExpression>
 			</textField>
 		</band>
 	</pageFooter>
